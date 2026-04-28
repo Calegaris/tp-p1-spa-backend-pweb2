@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Café Espresso",
+        "price": 1200
+    },
+    {
+        "id": 2,
+        "name": "Café Latte",
+        "price": 1500
+    },
+    {
+        "id": 3,
+        "name": "Cappuccino",
+        "price": 1600
+    }
+]
