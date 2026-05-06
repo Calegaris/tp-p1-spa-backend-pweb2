@@ -1,0 +1,3 @@
+# Carrito en memoria
+
+cart = []

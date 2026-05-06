@@ -1,5 +1,33 @@
+# Entorno virtual
 venv/
+ENV/
+env/
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Archivos de entorno
 .env
 .env.*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de pytest
+.pytest_cache/
+
+# Archivos de cobertura
+htmlcov/
+.coverage
+.coverage.*
+
+# Archivos de logs
+*.log
+
+# Archivos de editor
+.vscode/
+.idea/

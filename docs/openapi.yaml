@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  title: TP SPA Backend
+  version: 1.0.0
+  description: API del carrito de compras (Etapa 1)
+
+servers:
+  - url: http://localhost:5000
+    description: Servidor local de desarrollo
+
+tags:
+  - name: Productos
+    description: Operaciones relacionadas con los productos disponibles
+  - name: Carrito
+    description: Operaciones para gestionar el carrito de compras
+
+components:
+  schemas:
+
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "Café Espresso"
+        price:
+          type: number
+          example: 1200
+
+    CartItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "Café Espresso"
+        price:
+          type: number
+          example: 1200
+        quantity:
+          type: integer
+          example: 2
+
+    AddToCartRequest:
+      type: object
+      required:
+        - product_id
+        - quantity
+      properties:
+        product_id:
+          type: integer
+          example: 1
+        quantity:
+          type: integer
+          example: 2
+
+    TotalResponse:
+      type: object
+      properties:
+        total:
+          type: number
+          example: 3600
+
+paths:
+
+  /products:
+    get:
+      summary: Listar productos
+      tags:
+        - Productos
+      responses:
+        200:
+          description: Lista de productos disponibles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /cart/add:
+    post:
+      summary: Agregar producto al carrito
+      tags:
+        - Carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AddToCartRequest"
+      responses:
+        200:
+          description: Carrito actualizado
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CartItem"
+
+  /cart/{product_id}:
+    delete:
+      summary: Eliminar producto del carrito
+      tags:
+        - Carrito
+      parameters:
+        - in: path
+          name: product_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Carrito actualizado
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CartItem"
+
+  /cart/total:
+    get:
+      summary: Obtener total del carrito
+      tags:
+        - Carrito
+      responses:
+        200:
+          description: Total de la compra
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TotalResponse"
