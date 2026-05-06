@@ -1,5 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify
 
 products_bp = Blueprint("products", __name__)
 
-# Las rutas se implementarán en la feature correspondiente
+@products_bp.get("/")
+def products_root():
+    return jsonify({"message": "Products endpoint OK"}), 200

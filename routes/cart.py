@@ -1,5 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify
 
 cart_bp = Blueprint("cart", __name__)
 
-# Las rutas se implementarán en la feature correspondiente
+@cart_bp.get("/")
+def cart_root():
+    return jsonify({"message": "Cart endpoint OK"}), 200
