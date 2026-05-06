@@ -8,6 +8,12 @@
 ## 📝 Descripción del proyecto
 Este proyecto es la primera etapa del trabajo práctico "Desarrollo de Aplicación Web SPA" para la materia **Programación Web 2**. Consiste en el desarrollo de un servidor backend que expone una serie de APIs RESTful para gestionar un carrito de compras, inspirado en la aplicación "Coffee Cart".
 
+## 📌 Estado del proyecto
+
+- Etapa 1 (Backend): ✔ Completada
+- Etapa 2 (Frontend SPA): ⏳ En progreso
+- Etapa 3 (Integración final): ⏳ Pendiente
+
 ## 🎯 Objetivo de la Etapa 1
 El objetivo principal de esta etapa es implementar el servidor backend inicial con una persistencia de datos en memoria (sin base de datos real por ahora) y documentar sus APIs. 
 
@@ -23,6 +29,12 @@ El objetivo principal de esta etapa es implementar el servidor backend inicial c
 - **CORS:** Flask-CORS (preparado para la Etapa 2 con el frontend)
 - **Documentación API:** Flasgger (Swagger UI) / OpenAPI 3.0.0
 - **Testing:** Pytest & Pytest-Flask
+
+## 📦 Requisitos previos
+
+- Python 3.12 o superior
+- pip (gestor de paquetes de Python)
+- Git (para clonar el repositorio)
 
 ## 🚀 Cómo correr el backend
 
@@ -83,6 +95,16 @@ La API está completamente documentada utilizando Swagger UI. Una vez que el bac
 - `DELETE /cart/{product_id}`: Eliminar un producto del carrito.
 - `GET /cart/total`: Obtener el costo total de la compra.
 
+## 👤 Autor
+
+**Luis Calegari**  
+Estudiante de Licenciatura en Informática
+GitHub: https://github.com/Calegaris
+
+## 📄 Licencia
+
+Este proyecto es de uso académico.
+
 ---
 ---
 
@@ -93,6 +115,12 @@ La API está completamente documentada utilizando Swagger UI. Una vez que el bac
 
 ## 📝 Project Description
 This project is the first stage of the "SPA Web Application Development" assignment for the **Web Programming 2** course. It consists of developing a backend server that exposes a series of RESTful APIs to manage a shopping cart, inspired by the "Coffee Cart" application.
+
+## 📌 Project Status
+
+- Stage 1 (Backend): ✔ Completed
+- Stage 2 (Frontend SPA): ⏳ In Progress
+- Stage 3 (Final Integration): ⏳ Pending
 
 ## 🎯 Stage 1 Objective
 The main objective of this stage is to implement the initial backend server with in-memory data persistence (no real database for now) and document its APIs.
@@ -109,6 +137,12 @@ The main objective of this stage is to implement the initial backend server with
 - **CORS:** Flask-CORS (ready for Stage 2 frontend integration)
 - **API Documentation:** Flasgger (Swagger UI) / OpenAPI 3.0.0
 - **Testing:** Pytest & Pytest-Flask
+
+## 📦 Prerequisites
+
+- Python 3.12 or higher
+- pip (Python package manager)
+- Git (for cloning the repository)
 
 ## 🚀 How to Run the Backend
 
@@ -168,3 +202,13 @@ The API is fully documented using Swagger UI. Once the backend is running, you c
 - `POST /cart/add`: Add a product to the cart (requires product ID and quantity).
 - `DELETE /cart/{product_id}`: Remove a product from the cart.
 - `GET /cart/total`: Get the total cost of the purchase.
+
+## 👤 Author
+
+**Luis Calegari** 
+Computer Science Student
+GitHub: https://github.com/Calegaris
+
+## 📄 License
+
+This project is for academic use.
